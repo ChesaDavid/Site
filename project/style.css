@@ -1,0 +1,24 @@
+.navigate{
+    background-color:black;
+}
+.button{
+    width: 120px;
+    height: 50px;
+    background-color: black;
+    top: 50px;
+    color: white;
+}
+.button:focus{
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+    transition: 0.7s;
+}
+.button:hover{
+    background-color:#d5d7de;
+    transition: 0.7s;
+    color: black;
+}
+.button:active{
+    background-color: #ffbf00;
+}
