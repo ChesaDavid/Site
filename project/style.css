@@ -20,5 +20,31 @@
     color: black;
 }
 .button:active{
-    background-color: #ffbf00;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+.button-to-top{
+    background-color: red;
+    position: fixed;
+    color: white;
+    font-weight: bold;
+}
+.button-to-top:focus{
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+    transition: 0.7s;
+}
+.button-to-top:hover{
+    background-color:orange;
+    transition: 0.7s;
+    color: black;
+}
+.title-purchify{
+    font-weight: bold;
+    font-size: 120px;
+}
+.title-main-app{
+    align-self: center;
 }
