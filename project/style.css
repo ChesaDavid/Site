@@ -20,7 +20,7 @@
     color: black;
 }
 .button:active{
-    background-color: orange;
+    background-color: white;
     color: black;
     font-weight: bold;
 }
@@ -29,6 +29,8 @@
     position: fixed;
     color: white;
     font-weight: bold;
+    max-width: fit-content;
+    margin-left: auto;  
 }
 .button-to-top:focus{
     outline-color: transparent;
@@ -40,11 +42,26 @@
     background-color:orange;
     transition: 0.7s;
     color: black;
+
 }
-.title-purchify{
+.tiltle-purchify{
     font-weight: bold;
-    font-size: 120px;
+    font-size: 90px;
+    font-weight: bold;
+    padding-left: 90px;
 }
 .title-main-app{
     align-self: center;
+    padding-left: 90px;
+    display: flex;
+}
+.paragraph{
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 90px; 
+}
+.search1{
+    
+    font-size: xx-large;
 }
