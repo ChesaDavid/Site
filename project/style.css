@@ -62,6 +62,17 @@
     padding-left: 90px; 
 }
 .search1{
-    
+    margin-left: 300px;
+    margin-top: 290px;
+    padding-right: 75px;
     font-size: xx-large;
+}
+.right{
+  width: 500px;
+  height: 250px;
+  margin: 50px;
+  outline: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
