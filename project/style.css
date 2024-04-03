@@ -71,8 +71,15 @@
   width: 500px;
   height: 250px;
   margin: 50px;
-  outline: solid 1px black;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: auto;
+}
+.object{
+    position: relative;
+    margin: 50px;
+    background-color: bisque;
+    width: 700px;
+    height: 280px;
 }
