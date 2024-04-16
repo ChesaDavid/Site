@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMsearc</title>
+    <link rel="stylesheet" href="./login.css">
     <style>
         body{
-            background-color: rgb(4, 102, 102);
+            background-color: #F0F8FF;
         }
         .login{
             position: absolute;
-            margin-left: 50%;
+            margin-left: 40%;
             margin-right: auto;
             margin-bottom: 50%;
-            margin-top: 100px;
+            margin-top: 150px;
             font-family: cursive;
             outline: solid;
+            outline-color: rgb(13, 132, 104);
+            outline-style: double;
+            outline-width: 30px;
             font-size: 15px;
+            background-color: rgb(7, 157, 157);
+        }
+        h1{
+            padding-left: 100px;
+        }
+        p{
+            margin-top: -20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 20px;
         }
         #cancelbtn{
             color: white;
             background-color: rgb(228, 73, 73);
             border-radius: 50px;
+        }
+        li{
+            font-size: 20px;
+            padding-right: 10px;
+        }
+        ul{
+            
+        }
+        .form{
+            display: flex;
         }
     </style>
 </head>
@@ -31,15 +55,19 @@
             <h1>Log in</h1>
             <br>
             <p>You do not have an account?
-                 <scan><a href="./signup.html">Press here</a></scan></p>
+                 <scan><a href="./signup.html">SignUp</a></scan></p>
                 <br>
             <form action="autentificare">
                 <ul>
-                    <li>Email</li>
-                    <input type="email" placeholder="exemple@gmail.com">
+                    <div class="form">
+                        <li>Email</li>
+                        <input type="email" placeholder="exemple@gmail.com">
+                    </div>
                     <br>
-                    <li>Password</li>
-                    <input type="password" placeholder="password">
+                    <div class="form">
+                        <li>Password</li>
+                        <input type="password" placeholder="password">
+                    </div>
                     <br>
                 </ul>
                 <a href="../index.html"><button id="cancelbtn">Cancel</button></a>
