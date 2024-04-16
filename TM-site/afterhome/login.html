@@ -5,17 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMsearc</title>
     <style>
-        .appweap{
-               position: absolute;
-               margin-top: 100px;
+        body{
+            background-color: rgb(4, 102, 102);
+        }
+        .login{
+            position: absolute;
+            margin-left: 50%;
+            margin-right: auto;
+            margin-bottom: 50%;
+            margin-top: 100px;
+            font-family: cursive;
+            outline: solid;
+            font-size: 15px;
+        }
+        #cancelbtn{
+            color: white;
+            background-color: rgb(228, 73, 73);
+            border-radius: 50px;
         }
     </style>
 </head>
 <body>
     <div class="appwrap">
-        <div class="title">
+        <div class="login">
             <h1>Log in</h1>
-            
+            <br>
+            <p>You do not have an account?
+                 <scan><a href="./signup.html">Press here</a></scan></p>
+                <br>
+            <form action="autentificare">
+                <ul>
+                    <li>Email</li>
+                    <input type="email" placeholder="exemple@gmail.com">
+                    <br>
+                    <li>Password</li>
+                    <input type="password" placeholder="password">
+                    <br>
+                </ul>
+                <a href="../index.html"><button id="cancelbtn">Cancel</button></a>
+            </form>
         </div>
     </div>
 </body>
