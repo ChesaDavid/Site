@@ -51,28 +51,26 @@
 </head>
 <body>
     <div class="appwrap">
-        <div class="login">
-            <h1>Log in</h1>
+        <div class="container"> <!-- Change class from "login" to "container" to match CSS -->
+            <h2>Log in</h2> <!-- Change h1 to h2 to match CSS -->
             <br>
-            <p>You do not have an account?
-                 <scan><a href="./signup.html">SignUp</a></scan></p>
-                <br>
+            <p>You do not have an account? <a href="./signup.html">SignUp</a></p>
+            <br>
             <form action="autentificare">
-                <ul>
-                    <div class="form">
-                        <li>Email</li>
-                        <input type="email" placeholder="exemple@gmail.com">
-                    </div>
-                    <br>
-                    <div class="form">
-                        <li>Password</li>
-                        <input type="password" placeholder="password">
-                    </div>
-                    <br>
-                </ul>
-                <a href="../index.html"><button id="cancelbtn">Cancel</button></a>
+                <div class="input-group"> <!-- Change div class from "form" to "input-group" -->
+                    <li>Email</li> <!-- Remove li tag -->
+                    <input type="email" placeholder="example@gmail.com">
+                </div>
+                <br>
+                <div class="input-group"> <!-- Change div class from "form" to "input-group" -->
+                    <li>Password</li> <!-- Remove li tag -->
+                    <input type="password" placeholder="password">
+                </div>
+                <br>
+                <button type="submit" class="btn">Login</button> <!-- Change button id to class -->
             </form>
         </div>
     </div>
+    <script src="../firbase.js"></script>
 </body>
 </html>
