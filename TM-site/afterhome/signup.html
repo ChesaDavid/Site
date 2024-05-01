@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
+    <link rel="php" href="./signup.php">
 </head>
 <body>
     <div class="container">
-        <form class="signup-form" action="#" method="post">
+        <div id="errorMsg"></div>
+        <form class="signup-form" action="#" method="post" onsubmit="SubmitEvent()">
             <h2>Sign Up</h2>
             <div class="form-group">
                 <label for="username">Username</label>
@@ -26,8 +28,9 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit" id="signit">Sign Up</button>
         </form>
     </div>
+    <script src="./signup.js"></script>
 </body>
 </html>
