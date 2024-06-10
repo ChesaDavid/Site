@@ -3,18 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>TheRock</title>
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(244, 225, 225);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #333;
+        }
+    
+        #rock-lose-image, #rock-tie-image, #rock-win-image,
+         #paper-lose-image, #paper-win-image,
+        #paper-tie-image, #scissors-tie-image, #scissors-win-image,
+        #scissors-lose-image{
+            display: none;
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+            width: 300px;
+            height: 200px;
+        }
+
+        #rock {
+            background-color: #ff7f0e; 
+            color: white;
+        }
+        #paper {
+            background-color: #1f77b4; 
+            color: white;
+        }
+        #scissors {
+            background-color: #2ca02c; 
+            color: white;
+        }
+        #points{
+            position: absolute;
+            margin-left: -900px;
+            margin-top: -600px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div id="start">
-        <h1>Hello world!</h1>
-        <p class="sall">What is you're name?</p>
-        <input type="text" id="name" placeholder="Nume">
-        <button id="ap">Start</button>
+    <div id="points">
+        <h1>Points: <p id="pointst"></p></h1>
     </div>
-    <div id="ingame">
-        <p id="name1">da.</p>
+    <div id="container">
+        <h1>Rock Paper Scissors</h1>
+        <div id="game-container">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div id="result"></div>
+        <img src="./image4.png" id="rock-win-image" alt="Winner Image">
+        <img src="./image2.png" id="rock-lose-image" alt="Winner Image">
+        <img src="./image3.png" id="rock-tie-image" alt="Winner Image">
+        <img src="./paperLose.png" id="paper-lose-image">
+        <img src="./paperTie.jpeg" id="paper-tie-image">
+        <img src="./paperWin.jpeg" id="paper-win-image">
+        <img src="./scissorsLose.jpeg" id="scissors-lose-image" alt="">
+        <img src="./scissorsTie.jpeg" id="scissors-tie-image" alt="">
+        <img src="./scissorsWin.jpeg" id="scissors-win-image">
     </div>
+
+    <script>
+    var points = 0;
+    var pointsDisplay = document.getElementById('pointst');
+    document.getElementById('rock').addEventListener('click', function() { playGame('rock'); });
+    document.getElementById('paper').addEventListener('click', function() { playGame('paper'); });
+    document.getElementById('scissors').addEventListener('click', function() { playGame('scissors'); });
+
+    const choices = ['rock', 'paper', 'scissors'];
+
+    function updatePointsDisplay() {
+        pointsDisplay.innerHTML = points;
+    }
+
+    function playGame(playerChoice) {
+        choices.forEach(choice => {
+            document.getElementById(choice + '-tie-image').style.display = 'none';
+            document.getElementById(choice + '-win-image').style.display = 'none';
+            document.getElementById(choice + '-lose-image').style.display = 'none';
+        });
+        const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+        let result = '';
+``
+        if (playerChoice === computerChoice) {
+            result = 'It\'s a tie!';
+            document.getElementById(playerChoice + '-tie-image').style.display = 'block';   
+        } else if (
+            (playerChoice === 'rock' && computerChoice === 'scissors') ||
+            (playerChoice === 'paper' && computerChoice === 'rock') ||
+            (playerChoice === 'scissors' && computerChoice === 'paper')
+        ) {
+            points++;
+            result = 'You win!';
+            
+            document.getElementById(playerChoice + '-win-image').style.display = 'block';
+        } else {
+            points--;
+            result = 'Computer wins!';
+            document.getElementById(playerChoice + '-lose-image').style.display = 'block';
+        }
+
+        document.getElementById('result').innerText = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
+        updatePointsDisplay();
+    }
+</script>
 </body>
 </html>
